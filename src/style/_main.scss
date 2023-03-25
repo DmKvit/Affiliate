@@ -1,0 +1,149 @@
+.template {
+
+    // .template__container
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+
+        @media (max-width: $breakpoint768) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    // .template__img
+
+    &__img {
+        flex: 0 1 500px;
+
+        @media (max-width: $breakpoint1200) {
+            flex: 0 1 450px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            flex: 0 1 350px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            padding: 0 30px;
+            flex: 0 1 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .template__content
+
+    &__content {
+        flex: 0 1 500px;
+
+        @media (max-width: $breakpoint1200) {
+            flex: 0 1 450px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            flex: 0 1 350px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            margin: 0 0 20px 0;
+            flex: 0 1 100%;
+        }
+    }
+
+    // .template__block-text
+
+    &__block-text {
+    }
+}
+.block-text {
+
+    @media (max-width: $breakpoint480) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .block-text__subtitle
+
+    &__subtitle {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        line-height: 138.888889%; /* 25/18 */
+        color: $buttonColor;
+
+        @media (max-width: $breakpoint992) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            text-align: center;
+        }
+    }
+
+    // .block-text__title
+
+    &__title {
+        margin: 0 0 22px 0;
+        font-family: $fontSecondary;
+        font-size: 47px;
+        line-height: 110.638298%; /* 52/47 */
+        color: $cardColor;
+
+        @media (max-width: $breakpoint1200) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            font-size: 34px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            margin: 0 0 12px 0;
+            font-size: 26px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            text-align: center;
+        }
+    }
+
+    // .block-text__text
+
+    &__text {
+        margin: 0 0 15px 0;
+        font-size: 18px;
+        line-height: 133.333333%; /* 24/18 */
+        color: #333333;
+
+        @media (max-width: $breakpoint992) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            text-align: center;
+        }
+
+        span {
+            font-weight: $fontWeightBold;
+        }
+    }
+
+    // .block-text__button
+
+    &__button {
+        display: inline-block;
+        padding: 15px;
+        font-size: 15px;
+        line-height: 133.333333%; /* 20/15 */
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        background-color: #17A550;
+        border-radius: 5px;
+    }
+}
