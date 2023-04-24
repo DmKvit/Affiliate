@@ -239,14 +239,17 @@
             flex: auto;
         }
     }
+}
 
-    // .blog__button
+.view {
+
+    // .view__button
 
     &__button {
     }
-    
-    // .blog__button-articles
-    
+
+    // .view__button-articles
+
     &__button-articles {
         display: flex;
         align-items: center;
@@ -392,7 +395,7 @@
         margin: 0 0 100px 0;
 
         @media (max-width: $breakpoint768) {
-            min-height: 164px;
+            min-height: 150px;
         }
     }
 
@@ -423,7 +426,7 @@
         @media (max-width: $breakpoint768) {
             flex-direction: column;
             top: 25px;
-            min-height: 114px;
+            min-height: 100px;
         }
     }
 
@@ -432,16 +435,19 @@
     &__line {
         display:flex;
         align-items: center;
-
-        @media (max-width: $breakpoint768) {
-            margin: 0 0 10px 0;
-        }
     }
 
     // .lawncare__img
 
     &__img {
         margin: 0 12px 0 0;
+
+        img {
+            @media (max-width: $breakpoint768) {
+                height: 30px;
+            }
+        }
+        
     }
 
     // .lawncare__title
@@ -451,13 +457,15 @@
         font-size: 28px;
         line-height: 114.285714%; /* 32/28 */
         color: $fontColor;
+        text-align: center;
 
         @media (max-width: $breakpoint992) {
             font-size: 24px;
         }
 
         @media (max-width: $breakpoint768) {
-            font-size: 20px;
+            margin: 0;
+            font-size: 18px;
         }
     }
 
@@ -479,78 +487,257 @@
         text-align: center;
         color: $bodyColor;
         border: 1px solid #AABCC5;
+
+        @media (max-width: $breakpoint768) {
+            padding: 10px 17px;
+        }
     }
 }
 
 
-// .lawncare {
+/* --------------------------------- Product ---------------------------------------- */
+.product {
+    margin: 0 0 100px 0;
 
-//     // .lawncare__container
+    // .product__container
 
-//     &__container {
-//     }
+    &__container {
+    }
 
-//     // .lawncare__content
+    // .product__title
 
-//     &__content {
-//         padding: 0 15px;
-//         width: 100%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
+    &__title {
+        margin: 0 0 33px 0;
+        font-size: 38px;
+        line-height: 105.263158%; /* 40/38 */
+        color: $cardColor;
+    }
 
-//         @media (max-width: $breakpoint768) {
-//             flex-direction: column;
-//         }
-//     }
+    // .product__body
 
-//     // .lawncare__line
+    &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 -10px 40px;
 
-//     &__line {
-//         display:flex;
-//         align-items: center;
-//     }
+        @media (max-width: $breakpoint768) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
-//     // .lawncare__img
+    // .product__column
 
-//     &__img {
-//         margin: 0 12px 0 0;
-//     }
+    &__column {
+        margin: 0 10px;
+        flex: 0 1 357px;
+        background-color: $footerColor;
+        border-radius: 10px;
 
-//     // .lawncare__title
+        @media (max-width: $breakpoint768) {
+            max-width: 500px;
 
-//     &__title {
-//         margin: 0 10px 0 0;
-//         font-size: 28px;
-//         line-height: 114.285714%; /* 32/28 */
-//         color: $fontColor;
+            &:not(:last-child) {
+                margin: 0 10px 20px;
+            }
+        }
+    }
 
-//         @media (max-width: $breakpoint992) {
-//             font-size: 24px;
-//         }
+    // .product__item
 
-//         @media (max-width: $breakpoint768) {
-//             font-size: 20px;
-//         }
-//     }
+    &__item {
+    }
+}
+.item-product {
 
-//     // .lawncare__button
+    // .item-product__img
 
-//     &__button {
-//     }
+    &__img {
+        position: relative;
+        margin: 0 0 24px 0;
 
-//     // .lawncare__button-primary
+        img {
+            width: 100%;
+        }
+    }
 
-//     &__button-primary {
-//         padding: 15px 17px;
-//         background: $buttonColor;
-//         border-radius: 5px;
-//         white-space: nowrap;
+    // .item-product__img-title
 
-//         font-size: 15px;
-//         line-height: 146.666667%; /* 22/15 */
-//         text-align: center;
-//         color: $bodyColor;
-//         border: 1px solid #AABCC5;
-//     }
-// }
+    &__img-title {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 5px 10px;
+        background: rgba(29, 47, 56, 0.8);
+        border-radius: 3px;
+        font-size: 12px;
+        line-height: 166.666667%; /* 20/12 */
+        color: $bodyColor;
+        text-shadow: 
+        1px 0 1px #aabcc5, 
+        0 1px 1px #aabcc5, 
+        -1px 0 1px #aabcc5, 
+        0 -1px 1px #aabcc5;
+    }
+
+    // .item-product__content
+
+    &__content {
+        padding: 0 25px 40px;
+    }
+
+    // .item-product__title
+
+    &__title {
+        margin: 0 0 13px 0;
+        font-size: 30px;
+        line-height: 116.666667%; /* 35/30 */
+        color: $cardColor;
+
+        @media (max-width: $breakpoint1200) {
+            font-size: 26px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            font-size: 20px;
+        }
+    }
+
+    // .item-product__text
+
+    &__text {
+        font-size: 15px;
+        line-height: 133.333333%; /* 20/15 */
+        color: $cardColor;
+    }
+}
+
+
+/* --------------------------------- SignUp ---------------------------------------- */
+.signup {
+
+    // .signup__container
+
+    &__container {
+    }
+
+    // .signup__row
+
+    &__row {
+        position: relative;
+        margin: 0 0 100px 0;
+    }
+
+    // .signup__background
+
+    &__background {
+    }
+
+    // .signup__block
+
+    &__block {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    // .signup__column
+
+    &__column {
+        flex: 0 1 500px;
+    }
+
+    // .signup__img
+
+    &__img {
+    }
+
+    // .signup__content
+
+    &__content {
+        margin: 0 0 30px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    // .signup__title
+
+    &__title {
+        font-size: 30px;
+        line-height: 116.666667%; /* 35/30 */
+        color: $fontColor;
+        font-family: $fontSecondary;
+    }
+
+    // .signup__title-img
+
+    &__title-img {
+        margin: 0 10px 0 0;
+        height: 60px;
+        width: 60px;
+        background-color: $bodyColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #aabcc5;
+
+        svg {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    // .signup__text
+
+    &__text {
+        margin: 0 0 40px 0;
+        font-size: 18px;
+        line-height: 133.333333%; /* 24/18 */
+        color: $fontColor;
+    }
+
+    // .signup__form
+
+    &__form {
+    }
+
+    // .signup__input
+
+    &__input {
+        margin: 0 0 30px 0;
+        width: 100%;
+        height: 50px;
+        padding: 0 0 0 16px;
+        color: #536d7a;
+        border: 1px solid #aabcc5;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    // .signup__button
+
+    &__button {
+        padding: 15px 20px;
+        background-color: #ffc728;
+        font-size: 12px;
+        font-weight: $fontWeightBold;
+        line-height: 166.666667%; /* 20/12 */
+        color: #000000;
+        border-radius: 5px;
+    }
+
+    // .signup__policy
+
+    &__policy {
+        font-size: 12px;
+        line-height: 166.666667%; /* 20/12 */
+        color: #536d7a;
+    }
+}
